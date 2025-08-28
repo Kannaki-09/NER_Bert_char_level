@@ -842,7 +842,7 @@ torch.save({
     "label_to_id": label_to_id,
     "char_to_id": char_to_id
 }, "food_ner_model.pt")
-print("✅ Model saved to food_ner_model.pt")
+print("Model saved to food_ner_model.pt")
 
 # LOAD MODEL (later, before inference)
 checkpoint = torch.load("food_ner_model.pt", map_location=device)
@@ -853,7 +853,7 @@ classifier.load_state_dict(checkpoint["classifier"])
 optimizer.load_state_dict(checkpoint["optimizer"])
 label_to_id = checkpoint["label_to_id"]
 char_to_id = checkpoint["char_to_id"]
-print("✅ Model loaded from food_ner_model.pt")
+print("Model loaded from food_ner_model.pt")
 
 # Inference
 
